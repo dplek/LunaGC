@@ -9,6 +9,8 @@ import lombok.NoArgsConstructor;
 
 import java.util.*;
 
+//import org.jcp.xml.dsig.internal.dom.Utils;
+
 import static emu.grasscutter.Grasscutter.*;
 
 /**
@@ -272,6 +274,7 @@ public class ConfigContainer {
         public AvatarLimits avatarLimits = new AvatarLimits();
         public int sceneEntityLimit = 1000; // Unenforced. TODO: Implement.
 
+        public List<Integer> defaultActivityIds = Arrays.asList(2043, 5295, 5296, 6012, 5298, 5299, 6013);
         public boolean watchGachaConfig = false;
         public boolean enableShopItems = false;
         public boolean staminaUsage = true;

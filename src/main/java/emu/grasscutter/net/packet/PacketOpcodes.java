@@ -428,7 +428,7 @@ public final class PacketOpcodes {
     public static final int ActivityScheduleInfoNotify = 3215;
     public static final int GetActivityInfoReq = 1; 
     public static final int GetActivityInfoRsp = 1;
-    public static final int ActivityInfoNotify = 1; 
+    public static final int ActivityInfoNotify = 23076; 
 
     // Quests
     public static final int QueryCodexMonsterBeKilledNumReq = 22183;

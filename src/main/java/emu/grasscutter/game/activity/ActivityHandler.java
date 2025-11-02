@@ -127,9 +127,9 @@ public abstract class ActivityHandler {
                 .setEndTime(DateHelper.getUnixTime(activityConfigItem.getEndTime()))
                 .addAllMeetCondList(getMeetConditions(conditionExecutor));
 
-        if (playerActivityData != null) {
+        /*if (playerActivityData != null) {
             proto.addAllWatcherInfoList(playerActivityData.getAllWatcherInfoList());
-        }
+        }*/
 
         onProtoBuild(playerActivityData, proto);
 

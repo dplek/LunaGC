@@ -12,7 +12,6 @@ public class MusicGameActivityHandler extends ActivityHandler {
     @Override
     public void onInitPlayerActivityData(PlayerActivityData playerActivityData) {
         var musicGamePlayerData = MusicGamePlayerData.create();
-
         playerActivityData.setDetail(musicGamePlayerData);
     }
 
@@ -22,8 +21,8 @@ public class MusicGameActivityHandler extends ActivityHandler {
             ActivityInfoOuterClass.ActivityInfo.Builder activityInfo) {
         MusicGamePlayerData musicGamePlayerData = getMusicGamePlayerData(playerActivityData);
 
-        activityInfo.setMusicGameInfo(
-                MusicGameActivityDetailInfoOuterClass.MusicGameActivityDetailInfo.newBuilder()
+        /*activityInfo.setMusicGameInfo(
+            MusicGameActivityDetailInfoOuterClass.MusicGameActivityDetailInfo.newBuilder()
                         .putAllMusicGameRecordMap(
                                 musicGamePlayerData.getMusicGameRecord().values().stream()
                                         .collect(
@@ -41,7 +40,7 @@ public class MusicGameActivityHandler extends ActivityHandler {
                         //                .map(MusicGamePlayerData.CustomBeatmapRecord::toOthersBriefProto)
                         //                .map(UgcMusicBriefInfoOuterClass.UgcMusicBriefInfo.Builder::build)
                         //                .toList())
-                        .build());
+                        .build());*/
     }
 
     public MusicGamePlayerData getMusicGamePlayerData(PlayerActivityData playerActivityData) {
@@ -58,8 +57,14 @@ public class MusicGameActivityHandler extends ActivityHandler {
         var musicGamePlayerData = getMusicGamePlayerData(playerActivityData);
         var saveRecord = musicGamePlayerData.getMusicGameRecord().get(newRecord.getMusicId());
 
-        saveRecord.setMaxCombo(Math.max(newRecord.getMaxCombo(), saveRecord.getMaxCombo()));
-        saveRecord.setMaxScore(Math.max(newRecord.getMaxScore(), saveRecord.getMaxScore()));
+        if (saveRecord == null) {
+            saveRecord = newRecord;
+        } else {
+            saveRecord.setMaxCombo(Math.max(newRecord.getMaxCombo(), saveRecord.getMaxCombo()));
+            saveRecord.setMaxScore(Math.max(newRecord.getMaxScore(), saveRecord.getMaxScore()));
+        }
+
+        musicGamePlayerData.getMusicGameRecord().put(newRecord.getMusicId(), saveRecord);
 
         playerActivityData.setDetail(musicGamePlayerData);
         playerActivityData.save();
