@@ -53,36 +53,27 @@ public final class QuestOuterClass {
     int getFailProgressList(int index);
 
     /**
-     * <code>uint32 start_time = 4;</code>
-     * @return The startTime.
+     * <code>repeated uint32 CGGJFMDGJBL = 12;</code>
+     * @return A list containing the cGGJFMDGJBL.
      */
-    int getStartTime();
+    java.util.List<java.lang.Integer> getCGGJFMDGJBLList();
+    /**
+     * <code>repeated uint32 CGGJFMDGJBL = 12;</code>
+     * @return The count of cGGJFMDGJBL.
+     */
+    int getCGGJFMDGJBLCount();
+    /**
+     * <code>repeated uint32 CGGJFMDGJBL = 12;</code>
+     * @param index The index of the element to return.
+     * @return The cGGJFMDGJBL at the given index.
+     */
+    int getCGGJFMDGJBL(int index);
 
     /**
-     * <code>uint32 quest_config_id = 7;</code>
-     * @return The questConfigId.
-     */
-    int getQuestConfigId();
-
-    /**
-     * <code>uint32 quest_id = 1;</code>
-     * @return The questId.
-     */
-    int getQuestId();
-
-    /**
-     * <code>uint32 accept_time = 9;</code>
-     * @return The acceptTime.
-     */
-    int getAcceptTime();
-
-    /**
-     * <code>bool is_random = 5;</code>
-     * @return The isRandom.
-     */
-    boolean getIsRandom();
-
-    /**
+     * <pre>
+     *LackingResourceInfo NFKFKDOAOGN = 13;
+     * </pre>
+     *
      * <code>uint32 start_game_time = 8;</code>
      * @return The startGameTime.
      */
@@ -95,12 +86,46 @@ public final class QuestOuterClass {
     int getParentQuestId();
 
     /**
+     * <code>uint32 quest_id = 1;</code>
+     * @return The questId.
+     */
+    int getQuestId();
+
+    /**
+     * <code>uint32 quest_config_id = 7;</code>
+     * @return The questConfigId.
+     */
+    int getQuestConfigId();
+
+    /**
+     * <code>uint32 accept_time = 9;</code>
+     * @return The acceptTime.
+     */
+    int getAcceptTime();
+
+    /**
+     * <code>uint32 start_time = 4;</code>
+     * @return The startTime.
+     */
+    int getStartTime();
+
+    /**
+     * <code>bool is_random = 5;</code>
+     * @return The isRandom.
+     */
+    boolean getIsRandom();
+
+    /**
      * <code>uint32 state = 2;</code>
      * @return The state.
      */
     int getState();
   }
   /**
+   * <pre>
+   * Version: 6.1
+   * </pre>
+   *
    * Protobuf type {@code Quest}
    */
   public static final class Quest extends
@@ -115,6 +140,7 @@ public final class QuestOuterClass {
     private Quest() {
       finishProgressList_ = emptyIntList();
       failProgressList_ = emptyIntList();
+      cGGJFMDGJBL_ = emptyIntList();
     }
 
     @java.lang.Override
@@ -230,6 +256,27 @@ public final class QuestOuterClass {
               input.popLimit(limit);
               break;
             }
+            case 96: {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                cGGJFMDGJBL_ = newIntList();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              cGGJFMDGJBL_.addInt(input.readUInt32());
+              break;
+            }
+            case 98: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000004) != 0) && input.getBytesUntilLimit() > 0) {
+                cGGJFMDGJBL_ = newIntList();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                cGGJFMDGJBL_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -250,6 +297,9 @@ public final class QuestOuterClass {
         }
         if (((mutable_bitField0_ & 0x00000002) != 0)) {
           failProgressList_.makeImmutable(); // C
+        }
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
+          cGGJFMDGJBL_.makeImmutable(); // C
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -324,64 +374,41 @@ public final class QuestOuterClass {
     }
     private int failProgressListMemoizedSerializedSize = -1;
 
-    public static final int START_TIME_FIELD_NUMBER = 4;
-    private int startTime_;
+    public static final int CGGJFMDGJBL_FIELD_NUMBER = 12;
+    private com.google.protobuf.Internal.IntList cGGJFMDGJBL_;
     /**
-     * <code>uint32 start_time = 4;</code>
-     * @return The startTime.
+     * <code>repeated uint32 CGGJFMDGJBL = 12;</code>
+     * @return A list containing the cGGJFMDGJBL.
      */
     @java.lang.Override
-    public int getStartTime() {
-      return startTime_;
+    public java.util.List<java.lang.Integer>
+        getCGGJFMDGJBLList() {
+      return cGGJFMDGJBL_;
     }
-
-    public static final int QUEST_CONFIG_ID_FIELD_NUMBER = 7;
-    private int questConfigId_;
     /**
-     * <code>uint32 quest_config_id = 7;</code>
-     * @return The questConfigId.
+     * <code>repeated uint32 CGGJFMDGJBL = 12;</code>
+     * @return The count of cGGJFMDGJBL.
      */
-    @java.lang.Override
-    public int getQuestConfigId() {
-      return questConfigId_;
+    public int getCGGJFMDGJBLCount() {
+      return cGGJFMDGJBL_.size();
     }
-
-    public static final int QUEST_ID_FIELD_NUMBER = 1;
-    private int questId_;
     /**
-     * <code>uint32 quest_id = 1;</code>
-     * @return The questId.
+     * <code>repeated uint32 CGGJFMDGJBL = 12;</code>
+     * @param index The index of the element to return.
+     * @return The cGGJFMDGJBL at the given index.
      */
-    @java.lang.Override
-    public int getQuestId() {
-      return questId_;
+    public int getCGGJFMDGJBL(int index) {
+      return cGGJFMDGJBL_.getInt(index);
     }
-
-    public static final int ACCEPT_TIME_FIELD_NUMBER = 9;
-    private int acceptTime_;
-    /**
-     * <code>uint32 accept_time = 9;</code>
-     * @return The acceptTime.
-     */
-    @java.lang.Override
-    public int getAcceptTime() {
-      return acceptTime_;
-    }
-
-    public static final int IS_RANDOM_FIELD_NUMBER = 5;
-    private boolean isRandom_;
-    /**
-     * <code>bool is_random = 5;</code>
-     * @return The isRandom.
-     */
-    @java.lang.Override
-    public boolean getIsRandom() {
-      return isRandom_;
-    }
+    private int cGGJFMDGJBLMemoizedSerializedSize = -1;
 
     public static final int START_GAME_TIME_FIELD_NUMBER = 8;
     private int startGameTime_;
     /**
+     * <pre>
+     *LackingResourceInfo NFKFKDOAOGN = 13;
+     * </pre>
+     *
      * <code>uint32 start_game_time = 8;</code>
      * @return The startGameTime.
      */
@@ -399,6 +426,61 @@ public final class QuestOuterClass {
     @java.lang.Override
     public int getParentQuestId() {
       return parentQuestId_;
+    }
+
+    public static final int QUEST_ID_FIELD_NUMBER = 1;
+    private int questId_;
+    /**
+     * <code>uint32 quest_id = 1;</code>
+     * @return The questId.
+     */
+    @java.lang.Override
+    public int getQuestId() {
+      return questId_;
+    }
+
+    public static final int QUEST_CONFIG_ID_FIELD_NUMBER = 7;
+    private int questConfigId_;
+    /**
+     * <code>uint32 quest_config_id = 7;</code>
+     * @return The questConfigId.
+     */
+    @java.lang.Override
+    public int getQuestConfigId() {
+      return questConfigId_;
+    }
+
+    public static final int ACCEPT_TIME_FIELD_NUMBER = 9;
+    private int acceptTime_;
+    /**
+     * <code>uint32 accept_time = 9;</code>
+     * @return The acceptTime.
+     */
+    @java.lang.Override
+    public int getAcceptTime() {
+      return acceptTime_;
+    }
+
+    public static final int START_TIME_FIELD_NUMBER = 4;
+    private int startTime_;
+    /**
+     * <code>uint32 start_time = 4;</code>
+     * @return The startTime.
+     */
+    @java.lang.Override
+    public int getStartTime() {
+      return startTime_;
+    }
+
+    public static final int IS_RANDOM_FIELD_NUMBER = 5;
+    private boolean isRandom_;
+    /**
+     * <code>bool is_random = 5;</code>
+     * @return The isRandom.
+     */
+    @java.lang.Override
+    public boolean getIsRandom() {
+      return isRandom_;
     }
 
     public static final int STATE_FIELD_NUMBER = 2;
@@ -464,6 +546,13 @@ public final class QuestOuterClass {
       }
       for (int i = 0; i < failProgressList_.size(); i++) {
         output.writeUInt32NoTag(failProgressList_.getInt(i));
+      }
+      if (getCGGJFMDGJBLList().size() > 0) {
+        output.writeUInt32NoTag(98);
+        output.writeUInt32NoTag(cGGJFMDGJBLMemoizedSerializedSize);
+      }
+      for (int i = 0; i < cGGJFMDGJBL_.size(); i++) {
+        output.writeUInt32NoTag(cGGJFMDGJBL_.getInt(i));
       }
       unknownFields.writeTo(output);
     }
@@ -534,6 +623,20 @@ public final class QuestOuterClass {
         }
         failProgressListMemoizedSerializedSize = dataSize;
       }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < cGGJFMDGJBL_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(cGGJFMDGJBL_.getInt(i));
+        }
+        size += dataSize;
+        if (!getCGGJFMDGJBLList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        cGGJFMDGJBLMemoizedSerializedSize = dataSize;
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -553,20 +656,22 @@ public final class QuestOuterClass {
           .equals(other.getFinishProgressListList())) return false;
       if (!getFailProgressListList()
           .equals(other.getFailProgressListList())) return false;
-      if (getStartTime()
-          != other.getStartTime()) return false;
-      if (getQuestConfigId()
-          != other.getQuestConfigId()) return false;
-      if (getQuestId()
-          != other.getQuestId()) return false;
-      if (getAcceptTime()
-          != other.getAcceptTime()) return false;
-      if (getIsRandom()
-          != other.getIsRandom()) return false;
+      if (!getCGGJFMDGJBLList()
+          .equals(other.getCGGJFMDGJBLList())) return false;
       if (getStartGameTime()
           != other.getStartGameTime()) return false;
       if (getParentQuestId()
           != other.getParentQuestId()) return false;
+      if (getQuestId()
+          != other.getQuestId()) return false;
+      if (getQuestConfigId()
+          != other.getQuestConfigId()) return false;
+      if (getAcceptTime()
+          != other.getAcceptTime()) return false;
+      if (getStartTime()
+          != other.getStartTime()) return false;
+      if (getIsRandom()
+          != other.getIsRandom()) return false;
       if (getState()
           != other.getState()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
@@ -588,21 +693,25 @@ public final class QuestOuterClass {
         hash = (37 * hash) + FAIL_PROGRESS_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getFailProgressListList().hashCode();
       }
-      hash = (37 * hash) + START_TIME_FIELD_NUMBER;
-      hash = (53 * hash) + getStartTime();
-      hash = (37 * hash) + QUEST_CONFIG_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getQuestConfigId();
-      hash = (37 * hash) + QUEST_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getQuestId();
-      hash = (37 * hash) + ACCEPT_TIME_FIELD_NUMBER;
-      hash = (53 * hash) + getAcceptTime();
-      hash = (37 * hash) + IS_RANDOM_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getIsRandom());
+      if (getCGGJFMDGJBLCount() > 0) {
+        hash = (37 * hash) + CGGJFMDGJBL_FIELD_NUMBER;
+        hash = (53 * hash) + getCGGJFMDGJBLList().hashCode();
+      }
       hash = (37 * hash) + START_GAME_TIME_FIELD_NUMBER;
       hash = (53 * hash) + getStartGameTime();
       hash = (37 * hash) + PARENT_QUEST_ID_FIELD_NUMBER;
       hash = (53 * hash) + getParentQuestId();
+      hash = (37 * hash) + QUEST_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getQuestId();
+      hash = (37 * hash) + QUEST_CONFIG_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getQuestConfigId();
+      hash = (37 * hash) + ACCEPT_TIME_FIELD_NUMBER;
+      hash = (53 * hash) + getAcceptTime();
+      hash = (37 * hash) + START_TIME_FIELD_NUMBER;
+      hash = (53 * hash) + getStartTime();
+      hash = (37 * hash) + IS_RANDOM_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsRandom());
       hash = (37 * hash) + STATE_FIELD_NUMBER;
       hash = (53 * hash) + getState();
       hash = (29 * hash) + unknownFields.hashCode();
@@ -701,6 +810,10 @@ public final class QuestOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Version: 6.1
+     * </pre>
+     *
      * Protobuf type {@code Quest}
      */
     public static final class Builder extends
@@ -742,19 +855,21 @@ public final class QuestOuterClass {
         bitField0_ = (bitField0_ & ~0x00000001);
         failProgressList_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000002);
-        startTime_ = 0;
-
-        questConfigId_ = 0;
-
-        questId_ = 0;
-
-        acceptTime_ = 0;
-
-        isRandom_ = false;
-
+        cGGJFMDGJBL_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000004);
         startGameTime_ = 0;
 
         parentQuestId_ = 0;
+
+        questId_ = 0;
+
+        questConfigId_ = 0;
+
+        acceptTime_ = 0;
+
+        startTime_ = 0;
+
+        isRandom_ = false;
 
         state_ = 0;
 
@@ -795,13 +910,18 @@ public final class QuestOuterClass {
           bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.failProgressList_ = failProgressList_;
-        result.startTime_ = startTime_;
-        result.questConfigId_ = questConfigId_;
-        result.questId_ = questId_;
-        result.acceptTime_ = acceptTime_;
-        result.isRandom_ = isRandom_;
+        if (((bitField0_ & 0x00000004) != 0)) {
+          cGGJFMDGJBL_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.cGGJFMDGJBL_ = cGGJFMDGJBL_;
         result.startGameTime_ = startGameTime_;
         result.parentQuestId_ = parentQuestId_;
+        result.questId_ = questId_;
+        result.questConfigId_ = questConfigId_;
+        result.acceptTime_ = acceptTime_;
+        result.startTime_ = startTime_;
+        result.isRandom_ = isRandom_;
         result.state_ = state_;
         onBuilt();
         return result;
@@ -871,26 +991,36 @@ public final class QuestOuterClass {
           }
           onChanged();
         }
-        if (other.getStartTime() != 0) {
-          setStartTime(other.getStartTime());
-        }
-        if (other.getQuestConfigId() != 0) {
-          setQuestConfigId(other.getQuestConfigId());
-        }
-        if (other.getQuestId() != 0) {
-          setQuestId(other.getQuestId());
-        }
-        if (other.getAcceptTime() != 0) {
-          setAcceptTime(other.getAcceptTime());
-        }
-        if (other.getIsRandom() != false) {
-          setIsRandom(other.getIsRandom());
+        if (!other.cGGJFMDGJBL_.isEmpty()) {
+          if (cGGJFMDGJBL_.isEmpty()) {
+            cGGJFMDGJBL_ = other.cGGJFMDGJBL_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            ensureCGGJFMDGJBLIsMutable();
+            cGGJFMDGJBL_.addAll(other.cGGJFMDGJBL_);
+          }
+          onChanged();
         }
         if (other.getStartGameTime() != 0) {
           setStartGameTime(other.getStartGameTime());
         }
         if (other.getParentQuestId() != 0) {
           setParentQuestId(other.getParentQuestId());
+        }
+        if (other.getQuestId() != 0) {
+          setQuestId(other.getQuestId());
+        }
+        if (other.getQuestConfigId() != 0) {
+          setQuestConfigId(other.getQuestConfigId());
+        }
+        if (other.getAcceptTime() != 0) {
+          setAcceptTime(other.getAcceptTime());
+        }
+        if (other.getStartTime() != 0) {
+          setStartTime(other.getStartTime());
+        }
+        if (other.getIsRandom() != false) {
+          setIsRandom(other.getIsRandom());
         }
         if (other.getState() != 0) {
           setState(other.getState());
@@ -1083,163 +1213,91 @@ public final class QuestOuterClass {
         return this;
       }
 
-      private int startTime_ ;
-      /**
-       * <code>uint32 start_time = 4;</code>
-       * @return The startTime.
-       */
-      @java.lang.Override
-      public int getStartTime() {
-        return startTime_;
+      private com.google.protobuf.Internal.IntList cGGJFMDGJBL_ = emptyIntList();
+      private void ensureCGGJFMDGJBLIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          cGGJFMDGJBL_ = mutableCopy(cGGJFMDGJBL_);
+          bitField0_ |= 0x00000004;
+         }
       }
       /**
-       * <code>uint32 start_time = 4;</code>
-       * @param value The startTime to set.
+       * <code>repeated uint32 CGGJFMDGJBL = 12;</code>
+       * @return A list containing the cGGJFMDGJBL.
+       */
+      public java.util.List<java.lang.Integer>
+          getCGGJFMDGJBLList() {
+        return ((bitField0_ & 0x00000004) != 0) ?
+                 java.util.Collections.unmodifiableList(cGGJFMDGJBL_) : cGGJFMDGJBL_;
+      }
+      /**
+       * <code>repeated uint32 CGGJFMDGJBL = 12;</code>
+       * @return The count of cGGJFMDGJBL.
+       */
+      public int getCGGJFMDGJBLCount() {
+        return cGGJFMDGJBL_.size();
+      }
+      /**
+       * <code>repeated uint32 CGGJFMDGJBL = 12;</code>
+       * @param index The index of the element to return.
+       * @return The cGGJFMDGJBL at the given index.
+       */
+      public int getCGGJFMDGJBL(int index) {
+        return cGGJFMDGJBL_.getInt(index);
+      }
+      /**
+       * <code>repeated uint32 CGGJFMDGJBL = 12;</code>
+       * @param index The index to set the value at.
+       * @param value The cGGJFMDGJBL to set.
        * @return This builder for chaining.
        */
-      public Builder setStartTime(int value) {
-        
-        startTime_ = value;
+      public Builder setCGGJFMDGJBL(
+          int index, int value) {
+        ensureCGGJFMDGJBLIsMutable();
+        cGGJFMDGJBL_.setInt(index, value);
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 start_time = 4;</code>
+       * <code>repeated uint32 CGGJFMDGJBL = 12;</code>
+       * @param value The cGGJFMDGJBL to add.
        * @return This builder for chaining.
        */
-      public Builder clearStartTime() {
-        
-        startTime_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int questConfigId_ ;
-      /**
-       * <code>uint32 quest_config_id = 7;</code>
-       * @return The questConfigId.
-       */
-      @java.lang.Override
-      public int getQuestConfigId() {
-        return questConfigId_;
-      }
-      /**
-       * <code>uint32 quest_config_id = 7;</code>
-       * @param value The questConfigId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setQuestConfigId(int value) {
-        
-        questConfigId_ = value;
+      public Builder addCGGJFMDGJBL(int value) {
+        ensureCGGJFMDGJBLIsMutable();
+        cGGJFMDGJBL_.addInt(value);
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 quest_config_id = 7;</code>
+       * <code>repeated uint32 CGGJFMDGJBL = 12;</code>
+       * @param values The cGGJFMDGJBL to add.
        * @return This builder for chaining.
        */
-      public Builder clearQuestConfigId() {
-        
-        questConfigId_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int questId_ ;
-      /**
-       * <code>uint32 quest_id = 1;</code>
-       * @return The questId.
-       */
-      @java.lang.Override
-      public int getQuestId() {
-        return questId_;
-      }
-      /**
-       * <code>uint32 quest_id = 1;</code>
-       * @param value The questId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setQuestId(int value) {
-        
-        questId_ = value;
+      public Builder addAllCGGJFMDGJBL(
+          java.lang.Iterable<? extends java.lang.Integer> values) {
+        ensureCGGJFMDGJBLIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, cGGJFMDGJBL_);
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 quest_id = 1;</code>
+       * <code>repeated uint32 CGGJFMDGJBL = 12;</code>
        * @return This builder for chaining.
        */
-      public Builder clearQuestId() {
-        
-        questId_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int acceptTime_ ;
-      /**
-       * <code>uint32 accept_time = 9;</code>
-       * @return The acceptTime.
-       */
-      @java.lang.Override
-      public int getAcceptTime() {
-        return acceptTime_;
-      }
-      /**
-       * <code>uint32 accept_time = 9;</code>
-       * @param value The acceptTime to set.
-       * @return This builder for chaining.
-       */
-      public Builder setAcceptTime(int value) {
-        
-        acceptTime_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 accept_time = 9;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearAcceptTime() {
-        
-        acceptTime_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private boolean isRandom_ ;
-      /**
-       * <code>bool is_random = 5;</code>
-       * @return The isRandom.
-       */
-      @java.lang.Override
-      public boolean getIsRandom() {
-        return isRandom_;
-      }
-      /**
-       * <code>bool is_random = 5;</code>
-       * @param value The isRandom to set.
-       * @return This builder for chaining.
-       */
-      public Builder setIsRandom(boolean value) {
-        
-        isRandom_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bool is_random = 5;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearIsRandom() {
-        
-        isRandom_ = false;
+      public Builder clearCGGJFMDGJBL() {
+        cGGJFMDGJBL_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
 
       private int startGameTime_ ;
       /**
+       * <pre>
+       *LackingResourceInfo NFKFKDOAOGN = 13;
+       * </pre>
+       *
        * <code>uint32 start_game_time = 8;</code>
        * @return The startGameTime.
        */
@@ -1248,6 +1306,10 @@ public final class QuestOuterClass {
         return startGameTime_;
       }
       /**
+       * <pre>
+       *LackingResourceInfo NFKFKDOAOGN = 13;
+       * </pre>
+       *
        * <code>uint32 start_game_time = 8;</code>
        * @param value The startGameTime to set.
        * @return This builder for chaining.
@@ -1259,6 +1321,10 @@ public final class QuestOuterClass {
         return this;
       }
       /**
+       * <pre>
+       *LackingResourceInfo NFKFKDOAOGN = 13;
+       * </pre>
+       *
        * <code>uint32 start_game_time = 8;</code>
        * @return This builder for chaining.
        */
@@ -1296,6 +1362,161 @@ public final class QuestOuterClass {
       public Builder clearParentQuestId() {
         
         parentQuestId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int questId_ ;
+      /**
+       * <code>uint32 quest_id = 1;</code>
+       * @return The questId.
+       */
+      @java.lang.Override
+      public int getQuestId() {
+        return questId_;
+      }
+      /**
+       * <code>uint32 quest_id = 1;</code>
+       * @param value The questId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setQuestId(int value) {
+        
+        questId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 quest_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearQuestId() {
+        
+        questId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int questConfigId_ ;
+      /**
+       * <code>uint32 quest_config_id = 7;</code>
+       * @return The questConfigId.
+       */
+      @java.lang.Override
+      public int getQuestConfigId() {
+        return questConfigId_;
+      }
+      /**
+       * <code>uint32 quest_config_id = 7;</code>
+       * @param value The questConfigId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setQuestConfigId(int value) {
+        
+        questConfigId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 quest_config_id = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearQuestConfigId() {
+        
+        questConfigId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int acceptTime_ ;
+      /**
+       * <code>uint32 accept_time = 9;</code>
+       * @return The acceptTime.
+       */
+      @java.lang.Override
+      public int getAcceptTime() {
+        return acceptTime_;
+      }
+      /**
+       * <code>uint32 accept_time = 9;</code>
+       * @param value The acceptTime to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAcceptTime(int value) {
+        
+        acceptTime_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 accept_time = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAcceptTime() {
+        
+        acceptTime_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int startTime_ ;
+      /**
+       * <code>uint32 start_time = 4;</code>
+       * @return The startTime.
+       */
+      @java.lang.Override
+      public int getStartTime() {
+        return startTime_;
+      }
+      /**
+       * <code>uint32 start_time = 4;</code>
+       * @param value The startTime to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStartTime(int value) {
+        
+        startTime_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 start_time = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStartTime() {
+        
+        startTime_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean isRandom_ ;
+      /**
+       * <code>bool is_random = 5;</code>
+       * @return The isRandom.
+       */
+      @java.lang.Override
+      public boolean getIsRandom() {
+        return isRandom_;
+      }
+      /**
+       * <code>bool is_random = 5;</code>
+       * @param value The isRandom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsRandom(boolean value) {
+        
+        isRandom_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool is_random = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsRandom() {
+        
+        isRandom_ = false;
         onChanged();
         return this;
       }
@@ -1397,14 +1618,14 @@ public final class QuestOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\013Quest.proto\"\351\001\n\005Quest\022\034\n\024finish_progre" +
+      "\n\013Quest.proto\"\376\001\n\005Quest\022\034\n\024finish_progre" +
       "ss_list\030\n \003(\r\022\032\n\022fail_progress_list\030\013 \003(" +
-      "\r\022\022\n\nstart_time\030\004 \001(\r\022\027\n\017quest_config_id" +
-      "\030\007 \001(\r\022\020\n\010quest_id\030\001 \001(\r\022\023\n\013accept_time\030" +
-      "\t \001(\r\022\021\n\tis_random\030\005 \001(\010\022\027\n\017start_game_t" +
-      "ime\030\010 \001(\r\022\027\n\017parent_quest_id\030\006 \001(\r\022\r\n\005st" +
-      "ate\030\002 \001(\rB\033\n\031emu.grasscutter.net.protob\006" +
-      "proto3"
+      "\r\022\023\n\013CGGJFMDGJBL\030\014 \003(\r\022\027\n\017start_game_tim" +
+      "e\030\010 \001(\r\022\027\n\017parent_quest_id\030\006 \001(\r\022\020\n\010ques" +
+      "t_id\030\001 \001(\r\022\027\n\017quest_config_id\030\007 \001(\r\022\023\n\013a" +
+      "ccept_time\030\t \001(\r\022\022\n\nstart_time\030\004 \001(\r\022\021\n\t" +
+      "is_random\030\005 \001(\010\022\r\n\005state\030\002 \001(\rB\033\n\031emu.gr" +
+      "asscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1415,7 +1636,7 @@ public final class QuestOuterClass {
     internal_static_Quest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_Quest_descriptor,
-        new java.lang.String[] { "FinishProgressList", "FailProgressList", "StartTime", "QuestConfigId", "QuestId", "AcceptTime", "IsRandom", "StartGameTime", "ParentQuestId", "State", });
+        new java.lang.String[] { "FinishProgressList", "FailProgressList", "CGGJFMDGJBL", "StartGameTime", "ParentQuestId", "QuestId", "QuestConfigId", "AcceptTime", "StartTime", "IsRandom", "State", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

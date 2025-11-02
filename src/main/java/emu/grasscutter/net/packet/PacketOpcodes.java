@@ -443,8 +443,8 @@ public final class PacketOpcodes {
 	public static final int QuestUpdateQuestVarRsp = 1; 
 	public static final int RemoveRandTaskInfoNotify = 1;
 	public static final int GetParentQuestVideoKeyRsp = 1; 
-    public static final int AddQuestContentProgressReq = 1;
-    public static final int AddQuestContentProgressRsp = 1;
+    public static final int AddQuestContentProgressReq = 28567;
+    public static final int AddQuestContentProgressRsp = 2401;
     public static final int ServerCondMeetQuestListUpdateNotify = 1;
     public static final int QueryPathReq = 1;
     public static final int QueryPathRsp = 1;
@@ -454,9 +454,9 @@ public final class PacketOpcodes {
     public static final int QuestDestroyEntityReq = 1;
     public static final int QuestDestroyEntityRsp = 1;
     public static final int QuestGlobalVarNotify = 1;
-    public static final int QuestListNotify = 1;
-    public static final int QuestListUpdateNotify = 1;
-    public static final int QuestProgressUpdateNotify = 1;
+    public static final int QuestListNotify = 5613;
+    public static final int QuestListUpdateNotify = 20972;
+    public static final int QuestProgressUpdateNotify = 22825;
     public static final int QuestRenameAvatarReq = 1;
     public static final int QuestRenameAvatarRsp = 1;
     public static final int QuestTransmitReq = 1;
