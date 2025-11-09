@@ -200,7 +200,7 @@ public final class PacketOpcodes {
 	public static final int AvatarSkillUpgradeRsp = 28248;
     public static final int ProudSkillChangeNotify = 8445;
     public static final int AvatarUpgradeReq = 29540;
-	public static final int AvatarUpgradeRsp = 24094;
+	public static final int AvatarUpgradeRsp = 24904;
     public static final int CanUseSkillNotify = 1;
     // Player - Events
 	public static final int EvtAvatarLockChairReq = 22780;
